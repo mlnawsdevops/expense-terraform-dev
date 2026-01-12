@@ -9,3 +9,7 @@ output "vpc_id" {
 # output "default_vpc_info" {
 #     value = module.vpc.default_vpc_info
 # }
+
+# output "public_subnet_ids" {
+#     value = module.vpc.public_subnet_ids
+# }
