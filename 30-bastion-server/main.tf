@@ -1,4 +1,6 @@
 # open source module with aws contribution
+# 2 AZ = us-east-1a, us-east-1b
+# using 2AZ bastion servers are integrating with 2AZ of frontend, backend, mysql servers 
 
 #bastion-1 server
 module "ec2_instance" {
