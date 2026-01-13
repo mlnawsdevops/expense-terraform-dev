@@ -13,6 +13,14 @@ variable "common_tags" {
     }
 }
 
-variable "bastion_tags" {
+variable "mysql_tags" {
+    default = {}
+}
+
+variable "backend_tags" {
+    default = {}
+}
+
+variable "frontend_tags" {
     default = {}
 }
