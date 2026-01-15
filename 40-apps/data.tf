@@ -4,7 +4,7 @@ data "aws_ami" "rhel9" {
 
     filter {
       name = "name"
-      values = ["RHEL-9-DevOps-Practice"]
+      values = ["Redhat-9-DevOps-Practice"]
     }
 
     filter {
@@ -31,6 +31,10 @@ data "aws_ssm_parameter" "frontend_sg_id" {
     name = "/${var.project_name}/${var.environment}/frontend_sg_id"
 }
 
+data "aws_ssm_parameter" "ansible_sg_id" {
+    name = "/${var.project_name}/${var.environment}/ansible_sg_id"
+}
+
 data "aws_ssm_parameter" "public_subnet_ids" {
     name = "/${var.project_name}/${var.environment}/public_subnet_ids"
 }
@@ -41,4 +45,9 @@ data "aws_ssm_parameter" "private_subnet_ids" {
 
 data "aws_ssm_parameter" "database_subnet_ids" {
     name = "/${var.project_name}/${var.environment}/database_subnet_ids"
+}
+
+data "aws_route53_zone" "this" {
+  name         = "daws100s.online"
+  private_zone = false
 }
