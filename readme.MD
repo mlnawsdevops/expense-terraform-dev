@@ -1,4 +1,4 @@
-![alt text](<expense-infra-dev arch.jpg>)
+expense-terraform-dev/expense-tf-dev.svg
 
 
 for dir in 10-vpc 20-sg 30-bastion-server 40-apps; do 
